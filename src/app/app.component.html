@@ -1,0 +1,14 @@
+<h1>Simple Form in Angular</h1>
+<form #simpleForm="ngForm" (ngSubmit)="getValues(simpleForm.value)">
+<div *ngIf="showMe">
+  <h2 >{{simpleForm.value | json}} </h2><br>
+</div>  
+  <input type="text" ngModel  name="user" placeholder="Enter User Name">
+  <br>
+  <input type="text" ngModel name="age" placeholder="Enter Age">
+  <br>
+  <input type="text" ngModel name="address" placeholder="Enter Address">
+  <br>
+  <button >{{ReadMore?"Read More":"Read Less"}}</button>
+
+  </form>
